@@ -17,5 +17,9 @@ namespace Web0616.Controllers
         {
             return View();
         }
+        public ActionResult Music()
+        {
+            return View();
+        }
     }
 }
