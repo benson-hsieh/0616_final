@@ -21,5 +21,25 @@ namespace Web0616.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult Music(string name, int number) 
+        {
+            string[] a = { "", "do", "re", "mi", "fa", "so", "la", "si", "do" };
+            var result = "";
+            if (number <= 1 && number <= 7)
+            {
+                result = a[number];
+            }
+            else
+            {
+                result = "錯誤";
+            }
+
+
+            ViewBag.Name = name;
+            ViewBag.Result = result;
+
+            return View();
+        }
     }
 }
